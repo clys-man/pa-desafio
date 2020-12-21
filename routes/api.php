@@ -18,24 +18,19 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::namespace('API')->name('api.')->group(function(){
-    Route::prefix('posts')->group(function(){
-        Route::get('/', 'PostController@index')->name('index_post');
-        Route::post('/', 'PostController@store')->name('store_post');
-        Route::get('/{id}', 'PostController@show')->name('single_post');
-        Route::put('/{id}', 'PostController@update')->name('update_post');
-        Route::delete('/{id}', 'PostController@delete')->name('delete_post');
-    });
+    Route::resource('/posts', 'PostController', [
+        'except' => ['create' , 'edit']
+    ]);
 
-    Route::prefix('tags')->group(function(){
-        Route::get('/', 'TagController@index')->name('index_tag');
-        Route::post('/', 'TagController@store')->name('store_tag');
-        Route::get('/{id}', 'TagController@show')->name('single_tag');
-        Route::put('/{id}', 'TagController@update')->name('update_tag');
-        Route::delete('/{id}', 'TagController@delete')->name('delete_tag');
-    });
+    Route::resource('/tags', 'TagController', [
+        'except' => ['create' , 'edit']
+    ]);
 
     Route::prefix('users')->group(function(){
         Route::get('/', 'UserController@index')->name('index_user');
         Route::get('/{id}', 'UserController@show')->name('single_user');
     });
+
+    Route::post('/login', 'AuthController@login');
+    Route::post('/register', 'AuthController@register');
 });

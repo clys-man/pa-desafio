@@ -45,7 +45,7 @@ class Format{
     public static function userArr($user){
         return [
             "id" => $user->id,
-            "title" => $user->title,
+            "name" => $user->name,
             "email" => $user->email,
             "created_at" => $user->created_at,
             "updated_at" => $user->updated_at,

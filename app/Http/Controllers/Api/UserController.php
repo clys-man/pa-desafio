@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Api;
 use App\Api\Format;
 use App\Http\Controllers\Controller;
 use App\User;
-use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
@@ -33,7 +32,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $user = $this->user->find($id)->with('users')->first();
+        $user = $this->user->find($id)->with('posts')->first();
 
         if(!$user) return response()->json(['data' =>['msg' => 'Usuario não encontrado']], 404);
 

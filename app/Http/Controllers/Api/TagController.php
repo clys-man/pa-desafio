@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Api\ApiError;
 use App\Api\Format;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TagRequest;
-use App\Post;
 use App\Tag;
-use Illuminate\Http\Request;
 
 class TagController extends Controller
 {
@@ -25,12 +24,9 @@ class TagController extends Controller
      */
     public function index()
     {
-        $tags = $this->tag->with('posts')->paginate($this->paginate);
+        $tags = $this->tag->paginate($this->paginate);
 
-        $data = collect($tags->all())->map(function($tag) {
-            return Format::tagArr($tag);
-        });
-        return response()->json(Format::responseArr($tags, $data));
+        return response()->json($tags);
     }
 
     /**
@@ -65,8 +61,7 @@ class TagController extends Controller
      */
     public function show($id)
     {
-        $tag = $this->tag->find($id)->with('posts')->first();
-
+        $tag = $this->tag->with('posts')->find($id);
         if(!$tag) return response()->json(['data' =>['msg' => 'Tag não encontrada']], 404);
 
         $data = Format::tagArr($tag);
