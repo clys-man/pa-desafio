@@ -13,11 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
-Route::namespace('API')->name('api.')->group(function(){
+Route::namespace('API')->middleware('auth:api')->name('api.')->group(function(){
     Route::resource('/posts', 'PostController', [
         'except' => ['create' , 'edit']
     ]);
@@ -25,6 +21,10 @@ Route::namespace('API')->name('api.')->group(function(){
     Route::resource('/tags', 'TagController', [
         'except' => ['create' , 'edit']
     ]);
+
+    Route::get('/user', function (Request $request) {
+        return $request->user();
+    });
 
     Route::prefix('users')->group(function(){
         Route::get('/', 'UserController@index')->name('index_user');
