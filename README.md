@@ -13,25 +13,25 @@ Esta API está disponivel em uma Collection do Postman.
 [![Executar no Postman](https://run-beta.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/)
 
 ## Documentação
-Para ser redirecionado a documentação clique [aqui](https://disease.sh/docs/)
+Para ser redirecionado a documentação clique [aqui](https://disease.sh/docs/).
 
 ## Instalação
-## Pré-Requesitos
+## Pré-requesitos
 
 [PHP](https://www.php.net/downloads.php) >= 7.2.5<br>
 [Composer](https://getcomposer.org/download/)<br>
 [MySQL](https://www.mysql.com/downloads/) >= 5.6<br>
 
 ## Projeto
-**1** - Faça o download do repositorio
+**1** - Faça o download do repositório
 ```bash
 $ git clone https://github.com/Clys-man/pa-desafio.git
 ```
-**2**  - Na pasta do projeto faça a copia do arquivo `.env.example` e renomeie-o para `.env`
+**2**  - Na pasta do projeto faça a cópia do arquivo `.env.example` e renomeie-o para `.env`
 ```bash
 $ cp .env.example .env
 ```
-**3**  - No arquivo `.env` configure as variáveis de ambiente da aplicação com suas informações
+**3**  - No arquivo `.env` configure as variáveis de ambiente da aplicação com suas informações<br>
 **4**  - Baixe os pacotes necessários para inicialização do projeto
 ```bash
 $ composer install
@@ -40,7 +40,7 @@ $ composer install
 ```bash
 $ php artisan migrate --seed
 ```
-`Nota:` O comando acima tambem ira fazer o povoamento do banco de dados com informações, caso não queira remova `--seed`<br><br>
+`Nota:` O comando acima também irá fazer o povoamento do banco de dados com informações, caso não queira remova o paramêtro `--seed`<br><br>
 **6**  - Crie as chaves de criptografia usadas pelo Passport
 ```bash
 $ php artisan passport:install
