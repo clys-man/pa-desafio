@@ -4,7 +4,7 @@
 
 | Informações |
 |:------------:|
-| Esta REST API foi desenvolvida em resposta ao desafio proposto pelo [Plantão Ativo](https://plantaoativo.com/). Sua principal funcionalidade é ser um gerenciador de postagens com seus respectivos titulos, autores, conteúdos e tags. <br><br> Junto com API segue um Front-end em react, para teste mais visuais relacionados a integração dos Endpoints com uma UI(User Interface). Lembrando que para a realização de testes unitários não se faz obrigatorio a instalação do Front-end, pois ele visa apenas como uma aplicação real faria o uso da API. |
+| Esta REST API foi desenvolvida em resposta ao desafio proposto pelo [Plantão Ativo](https://plantaoativo.com/). Sua principal funcionalidade é ser um gerenciador de postagens com seus respectivos títulos, autores, conteúdos e tags. <br><br> Junto com API segue um Front-end em react, para teste mais visuais relacionados a integração dos Endpoints com uma UI(User Interface). Lembrando que para a realização de testes unitários não se faz obrigatorio a instalação do Front-end, pois ele visa apenas como uma aplicação real faria o uso da API. |
 
 
 ## Postman
