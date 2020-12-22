@@ -52,4 +52,4 @@ $ php artisan serve
 **8**  - Abra seu navegador e acesse: http://127.0.0.1:8000/
 
 ## Front-end
-<img src="https://i.imgur.com/adv8QH1.png>
+<img src="https://i.imgur.com/adv8QH1.png">
