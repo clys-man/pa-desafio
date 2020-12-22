@@ -23,34 +23,31 @@ Para ser redirecionado a documentação clique [aqui](https://disease.sh/docs/)
 [MySQL](https://www.mysql.com/downloads/) >= 5.6<br>
 
 ### Projeto
-``1`` - Faça o download do repositorio
+**1** - Faça o download do repositorio
 ```bash
 $ git clone https://github.com/Clys-man/pa-desafio.git
 ```
-``2`` - Na pasta do projeto faça a copia do arquivo `.env.example` e renomeie-o para `.env`
+**2**  - Na pasta do projeto faça a copia do arquivo `.env.example` e renomeie-o para `.env`
 ```bash
 $ cp .env.example .env
 ```
-``3`` - No arquivo `.env` configure as variáveis de ambiente da aplicação com suas informações
-``4`` - Baixe os pacotes necessários para inicialização do projeto
+**3**  - No arquivo `.env` configure as variáveis de ambiente da aplicação com suas informações
+**4**  - Baixe os pacotes necessários para inicialização do projeto
 ```bash
 $ composer install
 ```
-``5`` - Suba as Migrations para o banco de dados
+**5**  - Suba as Migrations para o banco de dados
 ```bash
 $ php artisan migrate --seed
 ```
 `Nota:` O comando acima tambem ira fazer o povoamento do banco de dados com informações, caso não queira remova `--seed`<br><br>
-``6`` - Crie as chaves de criptografia usadas pelo Passport
+**6**  - Crie as chaves de criptografia usadas pelo Passport
 ```bash
 $ php artisan passport:install
 ```
-``7`` - Crie as chaves de criptografia usadas pelo Passport
+**7**  - Crie as chaves de criptografia usadas pelo Passport
 ```bash
 $ php artisan serve
 ```
-`8` - Abra seu navegador e acesse: http://127.0.0.1:8000/
+**8**  - Abra seu navegador e acesse: http://127.0.0.1:8000/
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
