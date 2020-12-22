@@ -12,10 +12,16 @@ Esta API está disponivel em uma Collection do Postman.
 
 [![Executar no Postman](https://run-beta.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/)
 
-## Documentation
+## Documentação
 Para ser redirecionado a documentação clique [aqui](https://disease.sh/docs/)
 
-## Instalção
+## Instalação
+## Pré-Requesitos
+
+[PHP](https://www.php.net/downloads.php) >= 7.2.5
+[Composer](https://getcomposer.org/download/)
+[MySQL](https://www.mysql.com/downloads/) >= 5.6
+
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
