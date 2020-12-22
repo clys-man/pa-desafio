@@ -38,13 +38,18 @@ $ composer install
 ```
 7. Suba as Migrations para o banco de dados
 ```bash
-$ composer migrate --seed
+$ php artisan migrate --seed
 ```
-`Nota:` O comando acima tambem ira fazer o povoamento do banco de dados com informações, caso não queira remova `--seed` 
-8. Run `npm ci` to install the packages
-9. In another window run `npm run start:dev`
-10. Open your browser and navigate to `localhost:{PORT}` (PORT being the port specified in your `.env` file)
-11. You should now see the APIs landing page
+`Nota:` O comando acima tambem ira fazer o povoamento do banco de dados com informações, caso não queira remova `--seed`<br>
+8. Crie as chaves de criptografia usadas pelo Passport
+```bash
+$ php artisan passport:install
+```
+9. Inicie o servidor
+```bash
+$ php artisan serve
+```
+10. Abra seu navegador e acesse: http://localhost:8000
 
 ## License
 
