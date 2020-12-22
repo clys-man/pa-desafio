@@ -40,7 +40,7 @@ $ composer install
 ```bash
 $ php artisan migrate --seed
 ```
-`Nota:` O comando acima tambem ira fazer o povoamento do banco de dados com informações, caso não queira remova `--seed`<br>
+`Nota:` O comando acima tambem ira fazer o povoamento do banco de dados com informações, caso não queira remova `--seed`<br><br>
 8. Crie as chaves de criptografia usadas pelo Passport
 ```bash
 $ php artisan passport:install
