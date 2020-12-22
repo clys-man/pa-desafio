@@ -54,4 +54,4 @@ $ php artisan serve
 ## Front-end
 <img src="https://i.imgur.com/adv8QH1.png">
 
-<h2>Teste</h4>
+<p align="center">Como falado ateriomente, foi desenvolvida um parte visual para integração da API, o guia de instalação e configuração esta disponível em [PHP](https://www.php.net/downloads.php)</p>
