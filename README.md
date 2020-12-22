@@ -54,4 +54,9 @@ $ php artisan serve
 ## Front-end
 <img src="https://i.imgur.com/adv8QH1.png">
 
-**Como falado ateriomente, foi desenvolvida um parte visual para integração da API, o guia de instalação e configuração esta disponível em [Plantão Ativo Blog React](https://github.com/Clys-man/login-page-react)**
+> **Como falado ateriomente, foi desenvolvida um parte visual para integração da API, o guia de instalação e configuração esta disponível em [Plantão Ativo Blog React](https://github.com/Clys-man/login-page-react)**
+
+## Autor
+
+| [<img src="https://avatars0.githubusercontent.com/u/62316222?s=60&v=38"><br><sub>@filipedeschamps</sub>](https://github.com/filipedeschamps) |
+| :---: |
