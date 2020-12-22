@@ -54,4 +54,4 @@ $ php artisan serve
 ## Front-end
 <img src="https://i.imgur.com/adv8QH1.png">
 
-<h4>Teste</h4>
+<h2>Teste</h4>
