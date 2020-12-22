@@ -1,4 +1,4 @@
-<p align="center"><a href="https://plantaoativo.com/" target="_blank"><img src="https://plantaoativo.com/wp-content/uploads/2020/03/logo-pa.png" width="400"></a></p>
+<p align="center"><a href="https://plantaoativo.com/" target="_blank"><img src="https://plantaoativo.com/wp-content/uploads/2020/03/logo-pa.png"></a></p>
 
 <h1 align="center">Plantão Ativo API Desafio</h1>
 
@@ -22,7 +22,7 @@ Para ser redirecionado a documentação clique [aqui](https://disease.sh/docs/)
 [Composer](https://getcomposer.org/download/)<br>
 [MySQL](https://www.mysql.com/downloads/) >= 5.6<br>
 
-### Projeto
+## Projeto
 **1** - Faça o download do repositorio
 ```bash
 $ git clone https://github.com/Clys-man/pa-desafio.git
@@ -51,3 +51,5 @@ $ php artisan serve
 ```
 **8**  - Abra seu navegador e acesse: http://127.0.0.1:8000/
 
+## Front-end
+<img src="https://i.imgur.com/adv8QH1.png>
