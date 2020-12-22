@@ -22,16 +22,29 @@ Para ser redirecionado a documentação clique [aqui](https://disease.sh/docs/)
 [Composer](https://getcomposer.org/download/)<br>
 [MySQL](https://www.mysql.com/downloads/) >= 5.6<br>
 
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Projeto
+1. Faça o download do repositorio
+```bash
+$ git clone https://github.com/Clys-man/pa-desafio.git
+```
+2. Na pasta do projeto faça a copia do arquivo `.env.example` e renomeie-o para `.env`
+```bash
+$ cp .env.example .env
+```
+3. No arquivo `.env` configure as variáveis de ambiente da aplicação com suas informações
+4. Baixe os pacotes necessários para inicialização do projeto
+```bash
+$ composer install
+```
+7. Suba as Migrations para o banco de dados
+```bash
+$ composer migrate --seed
+```
+`Nota:` O comando acima tambem ira fazer o povoamento do banco de dados com informações, caso não queira remova `--seed` 
+8. Run `npm ci` to install the packages
+9. In another window run `npm run start:dev`
+10. Open your browser and navigate to `localhost:{PORT}` (PORT being the port specified in your `.env` file)
+11. You should now see the APIs landing page
 
 ## License
 
