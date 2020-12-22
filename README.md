@@ -58,5 +58,5 @@ $ php artisan serve
 
 ## Autor
 
-| [<img src="https://avatars0.githubusercontent.com/u/62316222?s=60&v=4"><br><sub>@Clys-man</sub>](https://github.com/Clys-man) |
+| [<img src="https://avatars0.githubusercontent.com/u/62316222?v=3&s=115"><br><sub>@Clys-man</sub>](https://github.com/Clys-man) |
 | :---: |
