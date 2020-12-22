@@ -18,9 +18,9 @@ Para ser redirecionado a documentação clique [aqui](https://disease.sh/docs/)
 ## Instalação
 ## Pré-Requesitos
 
-[PHP](https://www.php.net/downloads.php) >= 7.2.5
-[Composer](https://getcomposer.org/download/)
-[MySQL](https://www.mysql.com/downloads/) >= 5.6
+[PHP](https://www.php.net/downloads.php) >= 7.2.5<br>
+[Composer](https://getcomposer.org/download/)<br>
+[MySQL](https://www.mysql.com/downloads/) >= 5.6<br>
 
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
