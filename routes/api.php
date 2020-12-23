@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::namespace('API')->middleware('auth:api')->name('api.')->group(function(){
+Route::namespace('API')->name('api.')->group(function(){
     Route::resource('/posts', 'PostController', [
         'except' => ['create' , 'edit']
     ]);

@@ -13,6 +13,8 @@ class UserController extends Controller
 
     public function __construct(User $user){
         $this->user = $user;
+
+        $this->middleware('client');
     }
     /**
      * Display a listing of the resource.

@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::namespace('API')->middleware('client')->name('auth')->group(function(){
+    Route::prefix('auth')->group(function(){
+        Route::post('/login', 'AuthController@login');
+        Route::post('/register', 'AuthController@register');
+    });
+});

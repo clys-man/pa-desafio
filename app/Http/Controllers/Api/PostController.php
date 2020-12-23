@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Api\ApiError;
 use App\Api\Format;
+use App\Api\Validate;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PostRequest;
 use App\Post;
@@ -17,6 +18,9 @@ class PostController extends Controller
 
     public function __construct(Post $post){
         $this->post = $post;
+
+        $this->middleware('auth:api')->only(['store', 'update', 'destroy']);
+        $this->middleware('client');
     }
 
     /**
@@ -53,6 +57,8 @@ class PostController extends Controller
     {
         try {
             $postData = $request->all();
+            $postData->user_id = $request->user()->id;
+
             $post = $this->post->create($postData);
             $post->tags()->sync($request->tags);
 
@@ -73,7 +79,7 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\JsonResponse
      */
-    public function show($id)
+    public function show($request,$id)
     {
         $post = $this->post->with('author', 'tags')->find($id);
 
