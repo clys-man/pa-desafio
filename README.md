@@ -51,6 +51,27 @@ $ php artisan serve
 ```
 **8**  - Abra seu navegador e acesse: http://127.0.0.1:8000/
 
+## Executando Testes
+
+Para realização de teste é recomendado o uso de ferramentas como [Postman](https://www.postman.com/) ou [Insomnia](https://insomnia.rest/)
+
+## Listado usuários
+
+`GET /users?client_id={key}`
+
+    curl -i -H 'Accept: application/json' api/users/
+
+### Response
+
+    HTTP/1.1 200 OK
+    Date: Thu, 24 Feb 2011 12:36:30 GMT
+    Status: 200 OK
+    Connection: close
+    Content-Type: application/json
+    Content-Length: 2
+
+    []
+
 ## Front-end
 <img src="https://i.imgur.com/adv8QH1.png">
 
