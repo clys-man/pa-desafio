@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Api\ApiError;
+use App\Api\ApiMessage;
 use App\Api\Format;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TagRequest;
 use App\Tag;
+use Illuminate\Http\JsonResponse;
 
 class TagController extends Controller
 {
@@ -16,16 +17,15 @@ class TagController extends Controller
     public function __construct(Tag $tag){
         $this->tag = $tag;
 
-        $this->middleware('auth:api')->only(['store', 'update', 'destroy']);
         $this->middleware('client');
     }
 
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponse
      */
-    public function index()
+    public function index(): JsonResponse
     {
         $tags = $this->tag->paginate($this->paginate);
 
@@ -35,65 +35,59 @@ class TagController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\JsonResponse
+     * @param TagRequest $request
+     * @return JsonResponse
      */
-    public function store(TagRequest $request)
+    public function store(TagRequest $request): JsonResponse
     {
         try {
             $tagData = $request->all();
             $this->tag->create($tagData);
 
-            $return = ['data' => ['msg' => 'Tag adicionado com sucesso!']];
-
-            return response()->json($return, 201);
+            return response()->json(ApiMessage::display("Objeto criado com sucesso", 201), 201);
         } catch (\Exception $e) {
             if(config('app.debug')){
-                return response()->json(ApiError::errorMessage($e->getMessage(), 1010), 500);
+                return response()->json(ApiMessage::display($e->getMessage(), 1010), 500);
             }
-            return response()->json(ApiError::errorMessage("Houve um erro na operação de adicionar", 1010));
-
+            return response()->json(ApiMessage::display("500 Internal Server Error", 500));
         }
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\JsonResponse
+     * @param int $id
+     * @return JsonResponse
      */
-    public function show($id)
+    public function show(int $id): JsonResponse
     {
         $tag = $this->tag->with('posts')->find($id);
-        if(!$tag) return response()->json(['data' =>['msg' => 'Tag não encontrada']], 404);
+        if(!$tag) return response()->json(ApiMessage::display("404 Not Found", 404), 404);
 
         $data = Format::tagArr($tag);
         return response()->json($data);
     }
 
-
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\TagRequest  $request
+     * @param TagRequest $request
      * @param  int  $id
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponse
      */
-    public function update(TagRequest $request, $id)
+    public function update(TagRequest $request, $id): JsonResponse
     {
         try {
             $tagData = $request->all();
             $tag = $this->tag->find($id);
             $tag->update($tagData);
 
-            $return = ['data' => ['msg' => 'Tag atualizada com sucesso!']];
-
-            return response()->json($return, 201);
+            return response()->json(ApiMessage::display("Objeto atualizado com sucesso", 200), 200);
         } catch (\Exception $e) {
             if(config('app.debug')){
-                return response()->json(ApiError::errorMessage($e->getMessage(), 1020), 500);
+                return response()->json(ApiMessage::display($e->getMessage(), 1020), 500);
             }
-            return response()->json(ApiError::errorMessage("Houve um erro na operação de atualizar", 1020));
+            return response()->json(ApiMessage::display("Houve um erro ao efetuar a ação", 1020));
 
         }
     }
@@ -101,23 +95,23 @@ class TagController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\JsonResponse
+     * @param int $id
+     * @return JsonResponse
      */
-    public function destroy($id)
+    public function destroy(int $id): JsonResponse
     {
         $tag = $this->tag->find($id);
 
-        if(!$tag) return response()->json(['data' =>['msg' => 'Produto não encontrado']], 404);
+        if(!$tag) return response()->json(ApiMessage::display("404 Not Found", 404), 404);
 
         try {
             $tag->delete();
-            return response()->json(['data' => ['msg' => 'Tag '. $tag->title . ' deletada com sucesso']], 200);
+            return response()->json(ApiMessage::display("204 No Content", 204), 204);
         } catch (\Exception $e) {
             if(config('app.debug')){
-                return response()->json(ApiError::errorMessage($e->getMessage(), 1030), 500);
+                return response()->json(ApiMessage::display($e->getMessage(), 1030), 500);
             }
-            return response()->json(ApiError::errorMessage("Houve um erro na operação de remover", 1030));
+            return response()->json(ApiMessage::display("Houve um erro ao efetuar a ação", 1030));
         }
     }
 }

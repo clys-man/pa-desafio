@@ -1,11 +1,19 @@
 <?php
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
+/** @var Factory $factory */
 
 use App\Tag;
 use Faker\Generator as Faker;
+use Illuminate\Database\Eloquent\Factory;
 
 $factory->define(Tag::class, function (Faker $faker) {
+    $post = \App\Post::all('id')->random();
+    $post->tags()->sync([
+        $faker->randomDigitNotNull,
+        $faker->randomDigitNotNull,
+        $faker->randomDigitNotNull,
+        $faker->randomDigitNotNull
+    ]);
     return [
         'title' => $faker->randomElement([
             "organization","planning","collaboration", "writing",

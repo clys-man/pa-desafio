@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Api\ApiMessage;
 use App\Api\Format;
 use App\Http\Controllers\Controller;
 use App\User;
+use Illuminate\Http\JsonResponse;
 
 class UserController extends Controller
 {
@@ -19,9 +21,9 @@ class UserController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponse
      */
-    public function index()
+    public function index(): JsonResponse
     {
         return response()->json($this->user->paginate($this->paginate));
     }
@@ -29,18 +31,14 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\JsonResponse
+     * @param int $id
+     * @return JsonResponse
      */
-    public function show($id)
+    public function show(int $id): JsonResponse
     {
-        $user = $this->user->find($id)->with('posts')->first();
+        $user = $this->user->with('posts')->find($id);
+        if(!$user) return response()->json(ApiMessage::display("404 Not Found", 404), 404);
 
-        if(!$user) return response()->json(['data' =>['msg' => 'Usuario não encontrado']], 404);
-
-        $data = Format::userArr($user);
-
-        return response()->json($data);
+        return response()->json(Format::userArr($user->first()));
     }
-
 }

@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::namespace('API')->middleware('client')->name('auth')->group(function(){
-    Route::prefix('auth')->group(function(){
+    Route::prefix('oauth')->group(function(){
         Route::post('/login', 'AuthController@login');
         Route::post('/register', 'AuthController@register');
     });

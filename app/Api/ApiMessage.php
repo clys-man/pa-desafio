@@ -2,8 +2,8 @@
 
 namespace App\Api;
 
-class ApiError{
-    public static function errorMessage($message, $code){
+class ApiMessage{
+    public static function display($message, $code){
         return [
             'data' => [
                 'msg' => $message,
