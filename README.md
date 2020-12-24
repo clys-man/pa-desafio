@@ -44,20 +44,24 @@ DB_PASSWORD=
 ```bash
 $ composer install
 ```
-**5**  - Suba as Migrations para o banco de dados
+**5**  - Gere a chave da aplicação
+```bash
+$ php artisan key:generate
+```
+**6**  - Suba as Migrations para o banco de dados
 ```bash
 $ php artisan migrate --seed
 ```
 `Nota:` O comando acima também irá fazer o povoamento do banco de dados com informações, caso não queira remova o paramêtro `--seed`<br><br>
-**6**  - Crie as chaves de criptografia usadas pelo Passport
+**7**  - Crie as chaves de criptografia usadas pelo Passport
 ```bash
 $ php artisan passport:install
 ```
-**7**  - Crie as chaves de criptografia usadas pelo Passport
+**8**  - Crie as chaves de criptografia usadas pelo Passport
 ```bash
 $ php artisan serve
 ```
-**8**  - Abra seu navegador e acesse: http://127.0.0.1:8000/
+**9**  - Abra seu navegador e acesse: http://127.0.0.1:8000/
 
 ## Informações Sobre a API
 Os Endpoints suportados pela API são:
@@ -101,7 +105,7 @@ Os Endpoints suportados pela API são:
 | `/api/tags/{id}`    | Realiza a remoção de uma tag específica
 
 ## Parâmetros
-Os parâmetros `client_id` , `tag` e `page` são recebidos na propia URI.
+Os parâmetros `client_id` , `tag` e `page` são recebidos URI.
 
 | parâmetro                    | descrição                 |  | |
 |:-----------------------------|:----------------------------|:----------------------------|:----------------------------|
