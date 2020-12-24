@@ -77,14 +77,7 @@ Os Endpoints suportados pela API são:
 |:--------------|:----------------------------------|
 | `/api/posts`      | Retorna a lista de todos os posts, 30 por página
 | `/api/tags`    | Retorna a lista de todas os tags, 30 por página
-| `/api/users` | Retorna a lista de todos os posts, 30 por página |
-
-`GET`
-| Endpoints      | Descrição                       |
-|:--------------|:----------------------------------|
-| `/api/posts/{id}`      | Retorna as informações de um post específico
-| `/api/tags/{id}`    | Retorna as informações de uma tag específica
-| `/api/users/{id}` | Retorna as informações de um usuário específico |
+| `/api/users` | Retorna a lista de todos os usuários, 30 por página |
 
 `POST`
 | Endpoints      | Descrição                       |
@@ -92,13 +85,21 @@ Os Endpoints suportados pela API são:
 | `/api/posts/`      | Realiza a criação de um novo post
 | `/api/tags/`    | Realiza a criação de uma nova tag
 
-`PUT`
+`GET /{id}`
+| Endpoints      | Descrição                       |
+|:--------------|:----------------------------------|
+| `/api/posts/{id}`      | Retorna as informações de um post específico
+| `/api/tags/{id}`    | Retorna as informações de uma tag específica
+| `/api/users/{id}` | Retorna as informações de um usuário específico |
+
+
+`PUT /{id}`
 | Endpoints      | Descrição                       |
 |:--------------|:----------------------------------|
 | `/api/posts/{id}`      | Realiza a edição de um post específico
 | `/api/tags/{id}`    | Realiza a edição de uma tag específica
 
-`DELETE`
+`DELETE /{id}`
 | Endpoints      | Descrição                       |
 |:--------------|:----------------------------------|
 | `/api/posts/{id}`      | Realiza a remoção de um post específico
