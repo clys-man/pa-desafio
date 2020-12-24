@@ -25,7 +25,21 @@ $ git clone https://github.com/Clys-man/pa-desafio.git
 ```bash
 $ cp .env.example .env
 ```
-**3**  - No arquivo `.env` configure as variáveis de ambiente da aplicação com suas informações<br><br>
+**3**  - No arquivo `.env` configure as variáveis de ambiente da aplicação com suas informações
+```env
+APP_NAME=Laravel
+APP_ENV=local
+APP_KEY=
+APP_DEBUG=true
+APP_URL=http://localhost
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=root
+DB_PASSWORD=
+```
 **4**  - Baixe os pacotes necessários para inicialização do projeto
 ```bash
 $ composer install
