@@ -104,7 +104,7 @@ Os Endpoints suportados pela API são:
 Os parâmetros `client_id` , `tag` e `page` são recebidos na propia URI.
 
 | parâmetro                    | descrição                 | 
-|:-----------------------------|:----------------------------|
+|:-----------------------------|:----------------------------|:----------------------------|:----------------------------|
 | `client_id`                      | Identificado do client da requisição | string | requirido|
 | `tag`| Filtras os posts pelas tags | string | opcional|
 | `page`                   | Número da pagina para listagem | number | opcional|
