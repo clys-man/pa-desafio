@@ -57,7 +57,7 @@ $ php artisan migrate --seed
 ```bash
 $ php artisan passport:install
 ```
-**8**  - Crie as chaves de criptografia usadas pelo Passport
+**8**  - Inicie o servidor no seu ambiente local
 ```bash
 $ php artisan serve
 ```
