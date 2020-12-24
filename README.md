@@ -114,6 +114,14 @@ Os parâmetros `client_id` , `tag` e `page` são recebidos URI.
 | `tag`| Filtras os posts pelas tags | string | opcional
 | `page`                   | Número da pagina para listagem | number | opcional
 
+### Autenticação
+
+Esta API utiliza um parâmetro para realização de consultas.
+
+Os parâmetros que devem ser enviados para este tipo de autenticação são os seguintes:
+
+    ``clientId`` - Chave utilizada nos requests para autorização.
+
 Para a listagem de mais parâmetros ou informações mais específicas de cada Endpoint acesse a [documentação](https://pa-desafio.herokuapp.com/)
 
 ## Exemplos
