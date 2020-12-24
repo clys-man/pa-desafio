@@ -25,7 +25,7 @@ $ git clone https://github.com/Clys-man/pa-desafio.git
 ```bash
 $ cp .env.example .env
 ```
-**3**  - No arquivo `.env` configure as variáveis de ambiente da aplicação com suas informações<br>
+**3**  - No arquivo `.env` configure as variáveis de ambiente da aplicação com suas informações<br><br>
 **4**  - Baixe os pacotes necessários para inicialização do projeto
 ```bash
 $ composer install
