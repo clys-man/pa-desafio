@@ -111,6 +111,59 @@ Os parâmetros `client_id` , `tag` e `page` são recebidos na propia URI.
 
 Para a listagem de mais parâmetros ou informações mais específicas de cada Endpoint acesse a [documentação](https://pa-desafio.herokuapp.com/)
 
+## Exemplos
+Abaixo estão alguns exemplos de como realizar o uso dos Endpoints
+
+## Listando todas os posts
+
+###Request
+
+`GET /api/posts`
+    curl -i -H 'Accept: application/json' -d 'clientId=86da7s6d887fad5g7a?tag=node?page=1' https://pa-desafio.herokuapp.com/api/posts
+
+### Response
+
+    HTTP/1.1 200 OK
+    Date: Thu, 24 Feb 2011 12:36:30 GMT
+    Status: 200 OK
+    Content-Type: application/json
+    Content-Length: 2
+
+    []
+    
+## Criando um novo post
+
+###Request
+
+`GET /api/posts`
+  Headers
+  
+    Authentication: Bearer JWT
+    Accept: application/json
+    Content-Type: application/json
+    
+  Body
+
+    {
+      "author": "Marcia Thiel",
+      "title": "Notion",
+      "content": "Sed soluta nemo et consectetur reprehenderit ea reprehenderit sit.",
+      "tags": [1,2,3]
+    }
+    
+    
+
+### Response
+
+  Headers
+
+    Content-Type: application/json
+  Body
+  
+    {
+      "code": 200,
+      "msg": "Objeto criado com sucesso"
+    }
 
 ## Front-end
 <img src="https://i.imgur.com/adv8QH1.png">
