@@ -6,12 +6,6 @@
 |:------------:|
 | Esta REST API foi desenvolvida em resposta ao desafio proposto pelo [Plantão Ativo](https://plantaoativo.com/). Sua principal funcionalidade é ser um gerenciador de postagens com seus respectivos títulos, autores, conteúdos e tags. <br><br> Junto com a API, segue um Front-end em react para teste mais visuais relacionados a integração dos Endpoints com uma UI (User Interface). Lembrando que para a realização de testes unitários não se faz obrigatório a instalação do Front-end, pois sua função é demonstrar como uma aplicação real faria o uso da API. |
 
-
-## Postman
-Esta API está disponivel em uma Collection do Postman. 
-
-[![Executar no Postman](https://run-beta.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/)
-
 ## Documentação
 Para ser redirecionado a documentação clique [aqui](https://disease.sh/docs/).
 
