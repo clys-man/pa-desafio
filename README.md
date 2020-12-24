@@ -103,11 +103,11 @@ Os Endpoints suportados pela API são:
 ## Parâmetros
 Os parâmetros `client_id` , `tag` e `page` são recebidos na propia URI.
 
-| parâmetro                    | descrição                 | 
+| parâmetro                    | descrição                 |  | |
 |:-----------------------------|:----------------------------|:----------------------------|:----------------------------|
-| `client_id`                      | Identificado do client da requisição | string | requirido|
-| `tag`| Filtras os posts pelas tags | string | opcional|
-| `page`                   | Número da pagina para listagem | number | opcional|
+| `client_id`                      | Identificado do client da requisição | string | requirido
+| `tag`| Filtras os posts pelas tags | string | opcional
+| `page`                   | Número da pagina para listagem | number | opcional
 
 Para a listagem de mais parâmetros ou informações mais específicas de cada Endpoint acesse a [documentação](https://pa-desafio.herokuapp.com/)
 
