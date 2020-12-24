@@ -123,11 +123,11 @@ Abaixo estão alguns exemplos de como realizar o uso dos Endpoints
 
 ### Response
 
-  **Headers
+  **Headers**
   
     Content-Type: application/json
     
-  **Body
+  **Body**
 
     [
       {
@@ -152,11 +152,11 @@ Abaixo estão alguns exemplos de como realizar o uso dos Endpoints
 
 ### Response
 
-  **Headers
+  **Headers**
   
     Content-Type: application/json
     
-  **Body
+  **Body**
 
     [
       {
@@ -178,13 +178,14 @@ Abaixo estão alguns exemplos de como realizar o uso dos Endpoints
 ### Request
 
 `POST /api/posts?clientId={client_id}`
-  **Headers
+
+  **Headers**
   
     Authentication: Bearer JWT
     Accept: application/json
     Content-Type: application/json
     
-  **Body
+  **Body**
 
     {
       "author": "Marcia Thiel",
@@ -197,10 +198,10 @@ Abaixo estão alguns exemplos de como realizar o uso dos Endpoints
 
 ### Response
 
-  **Headers
+  **Headers**
 
     Content-Type: application/json
-  **Body
+  **Body**
   
     {
       "code": 200,
@@ -212,13 +213,13 @@ Abaixo estão alguns exemplos de como realizar o uso dos Endpoints
 
 ### Request
 
-   **Headers
+   **Headers**
    
     Authentication: Bearer JWT
     Accept: application/json
     Content-Type: application/json
     
-   **Body
+   **Body**
    
         {
           "id": 1,
@@ -229,10 +230,10 @@ Abaixo estão alguns exemplos de como realizar o uso dos Endpoints
         }
 ### Response
 
-   **Headers
+   **Headers**
    
         Content-Type: application/json
-   **Body
+   **Body**
    
         {
           "code": 200,
@@ -242,17 +243,17 @@ Abaixo estão alguns exemplos de como realizar o uso dos Endpoints
 ## Deletando um post
 `DELETE /api/posts/{id}?clientId={client_id}`
 
-   **Headers
+   **Headers**
    
     Authentication: Bearer JWT
     Content-Type: application/json
     
 ### Response
 
-   **Headers
+   **Headers**
    
         Content-Type: application/json
-   **Body
+   **Body**
    
         {
           "code": 204,
