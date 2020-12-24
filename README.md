@@ -59,6 +59,24 @@ $ php artisan serve
 ```
 **8**  - Abra seu navegador e acesse: http://127.0.0.1:8000/
 
+## Informações Sobre a API
+Os Endpoints suportados pela API são:
+
+| Endpoints de Autenticação      | Descrição                       |
+|:--------------|:----------------------------------|
+| `/auth/login`      | Usado para realizar autenticação e gerar o token de acesso.
+| `/auth/register`      | returns a list of all works (journal articles, conference proceedings, books, components, etc), 20 per page
+
+| Endpoints      | Descrição                       |
+|:--------------|:----------------------------------|
+| `/works`      | returns a list of all works (journal articles, conference proceedings, books, components, etc), 20 per page
+| `/funders`    | returns a list of all funders in the [Funder Registry](https://github.com/Crossref/open-funder-registry)
+| `/members` | returns a list of all Crossref members (mostly publishers) |
+| `/types`      | returns a list of valid work types |
+| `/licenses`  | return a list of licenses applied to works in Crossref metadata |
+| `/journals` | return a list of journals in the Crossref database |
+
+
 ## Front-end
 <img src="https://i.imgur.com/adv8QH1.png">
 
