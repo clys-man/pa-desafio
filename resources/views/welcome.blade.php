@@ -200,6 +200,9 @@
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="post" class="resource-group"><h2 class="group-heading">Post <a href="#post" class="permalink">&para;</a></h2><div id="post-posts" class="resource"><h3 class="resource-heading">Posts <a href="#post-posts" class="permalink">&nbsp;&para;</a></h3><div id="post-posts-get" class="action get"><h4 class="action-heading"><div class="name">Listar todos os posts</div><a href="#post-posts-get" class="method get">GET</a><code class="uri">/api/posts{clientId}{tag}</code></h4><h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://pa-desafio.herokuapp.com/</span>/api/posts<span class="hljs-attribute" title="clientId">?clientId=86da7s6d887fad5g7a</span><span class="hljs-attribute" title="tag">?tag=node</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>tag</dt><dd><code>string</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>?tag=node</span></span><blockquote>
 <p>Filtragem de postagens por tag.</p>
 </blockquote>
+</dd><dt>page</dt><dd><code>string</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>?page=2</span></span><blockquote>
+<p>Número da pagina a ser exibida.</p>
+</blockquote>
 </dd><dt>clientId</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>?clientId=86da7s6d887fad5g7a</span></span><blockquote>
 <p>Chave utilizada nos requests para autorização.</p>
 </blockquote>
@@ -236,7 +239,7 @@
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>404</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">code</span>": <span class="hljs-value"><span class="hljs-number">404</span></span>,
-  "<span class="hljs-attribute">msg</span>": <span class="hljs-value"><span class="hljs-string">"Nenhuma postagem encontrada"</span>
+  "<span class="hljs-attribute">msg</span>": <span class="hljs-value"><span class="hljs-string">"404 Not Found"</span>
 </span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
   "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
   "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
@@ -247,10 +250,10 @@
     </span>}</span>,
     "<span class="hljs-attribute">msg</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
-      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Nenhuma objeto encontrado."</span>
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"404 Not Found"</span>
     </span>}
   </span>}
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="post-post" class="resource"><h3 class="resource-heading">Post <a href="#post-post" class="permalink">&nbsp;&para;</a></h3><div id="post-post-get" class="action get"><h4 class="action-heading"><div class="name">Ver um post</div><a href="#post-post-get" class="method get">GET</a><code class="uri">/api/post/{post_id}{clientId}</code></h4><h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://pa-desafio.herokuapp.com/</span>/api/post/<span class="hljs-attribute" title="post_id">1</span><span class="hljs-attribute" title="clientId">?clientId=86da7s6d887fad5g7a</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>post_id</dt><dd><code>number</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><blockquote>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="post-post" class="resource"><h3 class="resource-heading">Post <a href="#post-post" class="permalink">&nbsp;&para;</a></h3><div id="post-post-get" class="action get"><h4 class="action-heading"><div class="name">Ver um post</div><a href="#post-post-get" class="method get">GET</a><code class="uri">/api/posts/{post_id}{clientId}</code></h4><h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://pa-desafio.herokuapp.com/</span>/api/posts/<span class="hljs-attribute" title="post_id">1</span><span class="hljs-attribute" title="clientId">?clientId=86da7s6d887fad5g7a</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>post_id</dt><dd><code>number</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><blockquote>
 <p>ID do elemento para busca</p>
 </blockquote>
 </dd><dt>clientId</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>?clientId=86da7s6d887fad5g7a</span></span><blockquote>
@@ -309,7 +312,7 @@
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>404</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">code</span>": <span class="hljs-value"><span class="hljs-number">404</span></span>,
-  "<span class="hljs-attribute">msg</span>": <span class="hljs-value"><span class="hljs-string">"Nenhuma postagem encontrada"</span>
+  "<span class="hljs-attribute">msg</span>": <span class="hljs-value"><span class="hljs-string">"404 Not Found"</span>
 </span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
   "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
   "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
@@ -320,10 +323,10 @@
     </span>}</span>,
     "<span class="hljs-attribute">msg</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
-      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Nenhuma objeto encontrado."</span>
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"404 Not Found"</span>
     </span>}
   </span>}
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div><div id="post-post-post" class="action post"><h4 class="action-heading"><div class="name">Criar um post</div><a href="#post-post-post" class="method post">POST</a><code class="uri">/api/post/{post_id}{clientId}</code></h4><h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">https://pa-desafio.herokuapp.com/</span>/api/post/<span class="hljs-attribute" title="post_id">1</span><span class="hljs-attribute" title="clientId">?clientId=86da7s6d887fad5g7a</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>post_id</dt><dd><code>number</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><blockquote>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div><div id="post-post-post" class="action post"><h4 class="action-heading"><div class="name">Criar um post</div><a href="#post-post-post" class="method post">POST</a><code class="uri">/api/posts/{post_id}{clientId}</code></h4><h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">https://pa-desafio.herokuapp.com/</span>/api/posts/<span class="hljs-attribute" title="post_id">1</span><span class="hljs-attribute" title="clientId">?clientId=86da7s6d887fad5g7a</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>post_id</dt><dd><code>number</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><blockquote>
 <p>ID do elemento para busca</p>
 </blockquote>
 </dd><dt>clientId</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>?clientId=86da7s6d887fad5g7a</span></span><blockquote>
@@ -402,7 +405,7 @@
       "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Unauthorized."</span>
     </span>}
   </span>}
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div><div id="post-post-delete" class="action delete"><h4 class="action-heading"><div class="name">Excluir um post</div><a href="#post-post-delete" class="method delete">DELETE</a><code class="uri">/api/post/{post_id}{clientId}</code></h4><h4>Example URI</h4><div class="definition"><span class="method delete">DELETE</span>&nbsp;<span class="uri"><span class="hostname">https://pa-desafio.herokuapp.com/</span>/api/post/<span class="hljs-attribute" title="post_id">1</span><span class="hljs-attribute" title="clientId">?clientId=86da7s6d887fad5g7a</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>post_id</dt><dd><code>number</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><blockquote>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div><div id="post-post-delete" class="action delete"><h4 class="action-heading"><div class="name">Excluir um post</div><a href="#post-post-delete" class="method delete">DELETE</a><code class="uri">/api/posts/{post_id}{clientId}</code></h4><h4>Example URI</h4><div class="definition"><span class="method delete">DELETE</span>&nbsp;<span class="uri"><span class="hostname">https://pa-desafio.herokuapp.com/</span>/api/posts/<span class="hljs-attribute" title="post_id">1</span><span class="hljs-attribute" title="clientId">?clientId=86da7s6d887fad5g7a</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>post_id</dt><dd><code>number</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><blockquote>
 <p>ID do elemento para busca</p>
 </blockquote>
 </dd><dt>clientId</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>?clientId=86da7s6d887fad5g7a</span></span><blockquote>
@@ -442,7 +445,7 @@
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>404</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">code</span>": <span class="hljs-value"><span class="hljs-number">404</span></span>,
-  "<span class="hljs-attribute">msg</span>": <span class="hljs-value"><span class="hljs-string">"Nenhuma postagem encontrada"</span>
+  "<span class="hljs-attribute">msg</span>": <span class="hljs-value"><span class="hljs-string">"404 Not Found"</span>
 </span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
   "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
   "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
@@ -453,10 +456,10 @@
     </span>}</span>,
     "<span class="hljs-attribute">msg</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
-      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Nenhuma objeto encontrado."</span>
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"404 Not Found"</span>
     </span>}
   </span>}
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div><div id="post-post-put" class="action put"><h4 class="action-heading"><div class="name">Editar um post</div><a href="#post-post-put" class="method put">PUT</a><code class="uri">/api/post/{post_id}{clientId}</code></h4><h4>Example URI</h4><div class="definition"><span class="method put">PUT</span>&nbsp;<span class="uri"><span class="hostname">https://pa-desafio.herokuapp.com/</span>/api/post/<span class="hljs-attribute" title="post_id">1</span><span class="hljs-attribute" title="clientId">?clientId=86da7s6d887fad5g7a</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>post_id</dt><dd><code>number</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><blockquote>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div><div id="post-post-put" class="action put"><h4 class="action-heading"><div class="name">Editar um post</div><a href="#post-post-put" class="method put">PUT</a><code class="uri">/api/posts/{post_id}{clientId}</code></h4><h4>Example URI</h4><div class="definition"><span class="method put">PUT</span>&nbsp;<span class="uri"><span class="hostname">https://pa-desafio.herokuapp.com/</span>/api/posts/<span class="hljs-attribute" title="post_id">1</span><span class="hljs-attribute" title="clientId">?clientId=86da7s6d887fad5g7a</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>post_id</dt><dd><code>number</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><blockquote>
 <p>ID do elemento para busca</p>
 </blockquote>
 </dd><dt>clientId</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>?clientId=86da7s6d887fad5g7a</span></span><blockquote>
@@ -547,7 +550,7 @@
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>404</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">code</span>": <span class="hljs-value"><span class="hljs-number">404</span></span>,
-  "<span class="hljs-attribute">msg</span>": <span class="hljs-value"><span class="hljs-string">"Nenhuma postagem encontrada"</span>
+  "<span class="hljs-attribute">msg</span>": <span class="hljs-value"><span class="hljs-string">"404 Not Found"</span>
 </span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
   "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
   "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
@@ -558,10 +561,13 @@
     </span>}</span>,
     "<span class="hljs-attribute">msg</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
-      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Nenhuma objeto encontrado."</span>
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"404 Not Found"</span>
     </span>}
   </span>}
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="tag" class="resource-group"><h2 class="group-heading">Tag <a href="#tag" class="permalink">&para;</a></h2><div id="tag-tags" class="resource"><h3 class="resource-heading">Tags <a href="#tag-tags" class="permalink">&nbsp;&para;</a></h3><div id="tag-tags-get" class="action get"><h4 class="action-heading"><div class="name">Listar todas as tags</div><a href="#tag-tags-get" class="method get">GET</a><code class="uri">/api/tags{clientId}</code></h4><h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://pa-desafio.herokuapp.com/</span>/api/tags<span class="hljs-attribute" title="clientId">?clientId=86da7s6d887fad5g7a</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>clientId</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>?clientId=86da7s6d887fad5g7a</span></span><blockquote>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="tag" class="resource-group"><h2 class="group-heading">Tag <a href="#tag" class="permalink">&para;</a></h2><div id="tag-tags" class="resource"><h3 class="resource-heading">Tags <a href="#tag-tags" class="permalink">&nbsp;&para;</a></h3><div id="tag-tags-get" class="action get"><h4 class="action-heading"><div class="name">Listar todas as tags</div><a href="#tag-tags-get" class="method get">GET</a><code class="uri">/api/tags{clientId}</code></h4><h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://pa-desafio.herokuapp.com/</span>/api/tags<span class="hljs-attribute" title="clientId">?clientId=86da7s6d887fad5g7a</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>page</dt><dd><code>string</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>?page=2</span></span><blockquote>
+<p>Número da pagina a ser exibida.</p>
+</blockquote>
+</dd><dt>clientId</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>?clientId=86da7s6d887fad5g7a</span></span><blockquote>
 <p>Chave utilizada nos requests para autorização.</p>
 </blockquote>
 </dd></dl></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>[
@@ -591,7 +597,7 @@
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>404</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">code</span>": <span class="hljs-value"><span class="hljs-number">404</span></span>,
-  "<span class="hljs-attribute">msg</span>": <span class="hljs-value"><span class="hljs-string">"Nenhuma postagem encontrada"</span>
+  "<span class="hljs-attribute">msg</span>": <span class="hljs-value"><span class="hljs-string">"404 Not Found"</span>
 </span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
   "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
   "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
@@ -602,7 +608,7 @@
     </span>}</span>,
     "<span class="hljs-attribute">msg</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
-      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Nenhuma objeto encontrado."</span>
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"404 Not Found"</span>
     </span>}
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="tag-tag" class="resource"><h3 class="resource-heading">Tag <a href="#tag-tag" class="permalink">&nbsp;&para;</a></h3><div id="tag-tag-get" class="action get"><h4 class="action-heading"><div class="name">Ver uma tag</div><a href="#tag-tag-get" class="method get">GET</a><code class="uri">/api/tags/{tag_id}{clientId}</code></h4><h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://pa-desafio.herokuapp.com/</span>/api/tags/<span class="hljs-attribute" title="tag_id">1</span><span class="hljs-attribute" title="clientId">?clientId=86da7s6d887fad5g7a</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>tag_id</dt><dd><code>number</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><blockquote>
@@ -654,7 +660,7 @@
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>404</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">code</span>": <span class="hljs-value"><span class="hljs-number">404</span></span>,
-  "<span class="hljs-attribute">msg</span>": <span class="hljs-value"><span class="hljs-string">"Nenhuma postagem encontrada"</span>
+  "<span class="hljs-attribute">msg</span>": <span class="hljs-value"><span class="hljs-string">"404 Not Found"</span>
 </span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
   "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
   "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
@@ -665,7 +671,7 @@
     </span>}</span>,
     "<span class="hljs-attribute">msg</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
-      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Nenhuma objeto encontrado."</span>
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"404 Not Found"</span>
     </span>}
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div><div id="tag-tag-post" class="action post"><h4 class="action-heading"><div class="name">Criar uma tag</div><a href="#tag-tag-post" class="method post">POST</a><code class="uri">/api/tags/{tag_id}{clientId}</code></h4><h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">https://pa-desafio.herokuapp.com/</span>/api/tags/<span class="hljs-attribute" title="tag_id">1</span><span class="hljs-attribute" title="clientId">?clientId=86da7s6d887fad5g7a</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>tag_id</dt><dd><code>number</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><blockquote>
@@ -799,7 +805,7 @@
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>404</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">code</span>": <span class="hljs-value"><span class="hljs-number">404</span></span>,
-  "<span class="hljs-attribute">msg</span>": <span class="hljs-value"><span class="hljs-string">"Nenhuma postagem encontrada"</span>
+  "<span class="hljs-attribute">msg</span>": <span class="hljs-value"><span class="hljs-string">"404 Not Found"</span>
 </span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
   "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
   "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
@@ -810,7 +816,7 @@
     </span>}</span>,
     "<span class="hljs-attribute">msg</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
-      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Nenhuma objeto encontrado."</span>
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"404 Not Found"</span>
     </span>}
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div><div id="tag-tag-put" class="action put"><h4 class="action-heading"><div class="name">Editar uma tag</div><a href="#tag-tag-put" class="method put">PUT</a><code class="uri">/api/tags/{tag_id}{clientId}</code></h4><h4>Example URI</h4><div class="definition"><span class="method put">PUT</span>&nbsp;<span class="uri"><span class="hostname">https://pa-desafio.herokuapp.com/</span>/api/tags/<span class="hljs-attribute" title="tag_id">1</span><span class="hljs-attribute" title="clientId">?clientId=86da7s6d887fad5g7a</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>tag_id</dt><dd><code>number</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><blockquote>
@@ -904,7 +910,7 @@
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>404</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">code</span>": <span class="hljs-value"><span class="hljs-number">404</span></span>,
-  "<span class="hljs-attribute">msg</span>": <span class="hljs-value"><span class="hljs-string">"Nenhuma postagem encontrada"</span>
+  "<span class="hljs-attribute">msg</span>": <span class="hljs-value"><span class="hljs-string">"404 Not Found"</span>
 </span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
   "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
   "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
@@ -915,10 +921,13 @@
     </span>}</span>,
     "<span class="hljs-attribute">msg</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
-      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Nenhuma objeto encontrado."</span>
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"404 Not Found"</span>
     </span>}
   </span>}
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="user" class="resource-group"><h2 class="group-heading">User <a href="#user" class="permalink">&para;</a></h2><div id="user-users" class="resource"><h3 class="resource-heading">Users <a href="#user-users" class="permalink">&nbsp;&para;</a></h3><div id="user-users-get" class="action get"><h4 class="action-heading"><div class="name">Listar users</div><a href="#user-users-get" class="method get">GET</a><code class="uri">/api/users{clientId}</code></h4><h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://pa-desafio.herokuapp.com/</span>/api/users<span class="hljs-attribute" title="clientId">?clientId=86da7s6d887fad5g7a</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>clientId</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>?clientId=86da7s6d887fad5g7a</span></span><blockquote>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="user" class="resource-group"><h2 class="group-heading">User <a href="#user" class="permalink">&para;</a></h2><div id="user-users" class="resource"><h3 class="resource-heading">Users <a href="#user-users" class="permalink">&nbsp;&para;</a></h3><div id="user-users-get" class="action get"><h4 class="action-heading"><div class="name">Listar users</div><a href="#user-users-get" class="method get">GET</a><code class="uri">/api/users{clientId}</code></h4><h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://pa-desafio.herokuapp.com/</span>/api/users<span class="hljs-attribute" title="clientId">?clientId=86da7s6d887fad5g7a</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>page</dt><dd><code>string</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>?page=2</span></span><blockquote>
+<p>Número da pagina a ser exibida.</p>
+</blockquote>
+</dd><dt>clientId</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>?clientId=86da7s6d887fad5g7a</span></span><blockquote>
 <p>Chave utilizada nos requests para autorização.</p>
 </blockquote>
 </dd></dl></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>[
@@ -948,7 +957,7 @@
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>404</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">code</span>": <span class="hljs-value"><span class="hljs-number">404</span></span>,
-  "<span class="hljs-attribute">msg</span>": <span class="hljs-value"><span class="hljs-string">"Nenhuma postagem encontrada"</span>
+  "<span class="hljs-attribute">msg</span>": <span class="hljs-value"><span class="hljs-string">"404 Not Found"</span>
 </span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
   "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
   "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
@@ -959,7 +968,7 @@
     </span>}</span>,
     "<span class="hljs-attribute">msg</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
-      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Nenhuma objeto encontrado."</span>
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"404 Not Found"</span>
     </span>}
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="user-user" class="resource"><h3 class="resource-heading">User <a href="#user-user" class="permalink">&nbsp;&para;</a></h3><div id="user-user-get" class="action get"><h4 class="action-heading"><div class="name">Ver user</div><a href="#user-user-get" class="method get">GET</a><code class="uri">/api/users/{user_id}{clientId}</code></h4><h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://pa-desafio.herokuapp.com/</span>/api/users/<span class="hljs-attribute" title="user_id">1</span><span class="hljs-attribute" title="clientId">?clientId=86da7s6d887fad5g7a</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>user_id</dt><dd><code>number</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><blockquote>
@@ -1011,7 +1020,7 @@
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>404</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">code</span>": <span class="hljs-value"><span class="hljs-number">404</span></span>,
-  "<span class="hljs-attribute">msg</span>": <span class="hljs-value"><span class="hljs-string">"Nenhuma postagem encontrada"</span>
+  "<span class="hljs-attribute">msg</span>": <span class="hljs-value"><span class="hljs-string">"404 Not Found"</span>
 </span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
   "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
   "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
@@ -1022,7 +1031,7 @@
     </span>}</span>,
     "<span class="hljs-attribute">msg</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
-      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Nenhuma objeto encontrado."</span>
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"404 Not Found"</span>
     </span>}
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div><div id="user-user-put" class="action put"><h4 class="action-heading"><div class="name">Editar user</div><a href="#user-user-put" class="method put">PUT</a><code class="uri">/api/users/{user_id}{clientId}</code></h4><h4>Example URI</h4><div class="definition"><span class="method put">PUT</span>&nbsp;<span class="uri"><span class="hostname">https://pa-desafio.herokuapp.com/</span>/api/users/<span class="hljs-attribute" title="user_id">1</span><span class="hljs-attribute" title="clientId">?clientId=86da7s6d887fad5g7a</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>user_id</dt><dd><code>number</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><blockquote>
@@ -1102,7 +1111,7 @@
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>404</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">code</span>": <span class="hljs-value"><span class="hljs-number">404</span></span>,
-  "<span class="hljs-attribute">msg</span>": <span class="hljs-value"><span class="hljs-string">"Nenhuma postagem encontrada"</span>
+  "<span class="hljs-attribute">msg</span>": <span class="hljs-value"><span class="hljs-string">"404 Not Found"</span>
 </span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
   "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
   "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
@@ -1113,10 +1122,10 @@
     </span>}</span>,
     "<span class="hljs-attribute">msg</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
-      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Nenhuma objeto encontrado."</span>
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"404 Not Found"</span>
     </span>}
   </span>}
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 23 Dec 2020</p><script>/* eslint-env browser */
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 24 Dec 2020</p><script>/* eslint-env browser */
 /* eslint quotes: [2, "single"] */
 'use strict';
 
