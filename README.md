@@ -114,28 +114,70 @@ Para a listagem de mais parâmetros ou informações mais específicas de cada E
 ## Exemplos
 Abaixo estão alguns exemplos de como realizar o uso dos Endpoints
 
-## Listando todas os posts
+## Listando todos os posts
 
-###Request
+### Request
 
-`GET /api/posts`
-    curl -i -H 'Accept: application/json' -d 'clientId=86da7s6d887fad5g7a?tag=node?page=1' https://pa-desafio.herokuapp.com/api/posts
+`GET /api/posts?clientId={client_id}&tag=node&page=1`
+
 
 ### Response
 
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:30 GMT
-    Status: 200 OK
+  Headers
+  
     Content-Type: application/json
-    Content-Length: 2
-
-    []
     
+  Body
+
+    [
+      {
+        "id": 1,
+        "author": "Marcia Thiel",
+        "title": "Notion",
+        "content": "Sed soluta nemo et consectetur reprehenderit ea reprehenderit sit.",
+        "tags": [
+          "node",
+          "planning",
+          "collaboration"
+        ]
+      }
+    ]
+    
+## Pegando um post específico
+
+### Request
+
+`GET /api/posts/{id}?clientId={client_id}`
+
+
+### Response
+
+  Headers
+  
+    Content-Type: application/json
+    
+  Body
+
+    [
+      {
+        "id": 1,
+        "author": "Marcia Thiel",
+        "title": "Notion",
+        "content": "Sed soluta nemo et consectetur reprehenderit ea reprehenderit sit.",
+        "tags": [
+          "organization",
+          "planning",
+          "collaboration"
+        ]
+      }
+    ]
+    
+ 
 ## Criando um novo post
 
-###Request
+### Request
 
-`GET /api/posts`
+`POST /api/posts?clientId={client_id}`
   Headers
   
     Authentication: Bearer JWT
@@ -164,6 +206,58 @@ Abaixo estão alguns exemplos de como realizar o uso dos Endpoints
       "code": 200,
       "msg": "Objeto criado com sucesso"
     }
+    
+## Editando um post
+`PUT /api/posts/{id}?clientId={client_id}`
+
+### Request
+
+   Headers
+   
+    Authentication: Bearer JWT
+    Accept: application/json
+    Content-Type: application/json
+    
+   Body
+   
+        {
+          "id": 1,
+          "author": "Marcia Thiel",
+          "title": "Notion",
+          "content": "Sed soluta nemo et consectetur reprehenderit ea reprehenderit sit.",
+          "tags": [1,2,3]
+        }
+### Response
+
+   Headers
+   
+        Content-Type: application/json
+   Body
+   
+        {
+          "code": 200,
+          "msg": "Objeto criado com sucesso"
+        }
+        
+## Deletando um post
+`DELETE /api/posts/{id}?clientId={client_id}`
+
+   Headers
+   
+    Authentication: Bearer JWT
+    Content-Type: application/json
+    
+### Response
+
+   Headers
+   
+        Content-Type: application/json
+   Body
+   
+        {
+          "code": 204,
+          "msg": "No content"
+        }
 
 ## Front-end
 <img src="https://i.imgur.com/adv8QH1.png">
