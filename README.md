@@ -123,7 +123,7 @@ Abaixo estão alguns exemplos de como realizar o uso dos Endpoints
 
 ### Response
 
-  **Headers**
+  **Headers
   
     Content-Type: application/json
     
