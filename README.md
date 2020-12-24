@@ -62,19 +62,43 @@ $ php artisan serve
 ## Informações Sobre a API
 Os Endpoints suportados pela API são:
 
-| Endpoints de Autenticação      | Descrição                       |
-|:--------------|:----------------------------------|
-| `/auth/login`      | Usado para realizar autenticação e gerar o token de acesso.
-| `/auth/register`      | returns a list of all works (journal articles, conference proceedings, books, components, etc), 20 per page
-
+`POST`
 | Endpoints      | Descrição                       |
 |:--------------|:----------------------------------|
-| `/works`      | returns a list of all works (journal articles, conference proceedings, books, components, etc), 20 per page
-| `/funders`    | returns a list of all funders in the [Funder Registry](https://github.com/Crossref/open-funder-registry)
-| `/members` | returns a list of all Crossref members (mostly publishers) |
-| `/types`      | returns a list of valid work types |
-| `/licenses`  | return a list of licenses applied to works in Crossref metadata |
-| `/journals` | return a list of journals in the Crossref database |
+| `/auth/login`      | Realiza a autenticação e gerar o token de acesso.
+| `/auth/register`      | Realiza o registro de um novo usuário.
+
+`GET`
+| Endpoints      | Descrição                       |
+|:--------------|:----------------------------------|
+| `/api/posts`      | Retorna a lista de todos os posts, 30 por página
+| `/api/tags`    | Retorna a lista de todas os tags, 30 por página
+| `/api/users` | Retorna a lista de todos os posts, 30 por página |
+
+`GET`
+| Endpoints      | Descrição                       |
+|:--------------|:----------------------------------|
+| `/api/posts/{id}`      | Retorna as informações de um post específico
+| `/api/tags/{id}`    | Retorna as informações de uma tag específica
+| `/api/users/{id}` | Retorna as informações de um usuário específico |
+
+`POST`
+| Endpoints      | Descrição                       |
+|:--------------|:----------------------------------|
+| `/api/posts/`      | Realiza a criação de um novo post
+| `/api/tags/`    | Realiza a criação de uma nova tag
+
+`PUT`
+| Endpoints      | Descrição                       |
+|:--------------|:----------------------------------|
+| `/api/posts/{id}`      | Realiza a edição de um post específico
+| `/api/tags/{id}`    | Realiza a edição de uma tag específica
+
+`DELETE`
+| Endpoints      | Descrição                       |
+|:--------------|:----------------------------------|
+| `/api/posts/{id}`      | Realiza a remoção de um post específico
+| `/api/tags/{id}`    | Realiza a remoção de uma tag específica
 
 
 ## Front-end
