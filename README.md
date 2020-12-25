@@ -276,7 +276,7 @@ Abaixo estão alguns exemplos de como realizar o uso dos Endpoints
 ## Front-end
 <img src="https://i.imgur.com/adv8QH1.png">
 
-> **Como falado ateriomente, foi desenvolvida um parte visual para integração da API, o guia de instalação e configuração esta disponível em [Plantão Ativo Blog React](https://github.com/Clys-man/login-page-react)**
+> **Como falado ateriomente, foi desenvolvida um parte visual para integração da API, o guia de instalação e configuração esta disponível em [Plantão Ativo Blog React](https://github.com/Clys-man/react-blog-frontend)**
 
 ## Autor
 
