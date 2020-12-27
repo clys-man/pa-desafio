@@ -42,7 +42,10 @@ class TagController extends Controller
     {
         try {
             $tagData = $request->all();
-            $this->tag->create($tagData);
+            $this->tag->create([
+                'title'=> $tagData['title'],
+                'description'=> $tagData['description']
+            ]);
 
             return response()->json(ApiMessage::display("Objeto criado com sucesso", 201), 201);
         } catch (\Exception $e) {
@@ -80,7 +83,10 @@ class TagController extends Controller
         try {
             $tagData = $request->all();
             $tag = $this->tag->find($id);
-            $tag->update($tagData);
+            $tag->update([
+                'title'=> $tagData['title'],
+                'description'=> $tagData['description']
+            ]);
 
             return response()->json(ApiMessage::display("Objeto atualizado com sucesso", 200), 200);
         } catch (\Exception $e) {
